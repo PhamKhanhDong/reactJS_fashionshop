@@ -28,10 +28,8 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-/vendor
 /test
 
 # Ignore application configuration
-/config/application.yml
 /public/upload/*
 /public/javascripts/*
