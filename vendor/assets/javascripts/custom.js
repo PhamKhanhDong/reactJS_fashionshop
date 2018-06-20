@@ -59,27 +59,6 @@ jQuery(document).on("turbolinks:load", function() {
     }
   });
 
-  jQuery(".item-quanity").change(function(){
-    var url = $(this).attr("url_update");
-    var quantity = $(this).val()
-    jQuery.ajax({
-      url: url,
-      type: "POST",
-      data: {
-        quantity: quantity
-      },
-      success: function (result){
-        jQuery(".product-subtotal-"+ result.cart.product_id +" .amount").text(result.cart.product_subtotal);
-        jQuery(".cart-total-value, .order_total").text(result.cart.total);
-        jQuery(".quantity-item-cart").text(result.cart.count_product_cart);
-        jQuery(".cart-item-quantity-"+result.cart.product_id).text(result.cart.quantity);
-        toastr.options.timeOut = result.cart.toastr_timeout
-        console.log(result.cart.toastr_timeout);
-        toastr.success(result.cart.update_success);
-      }
-    });
-  });
-
   $('.btn-search').click(function(){
     $('.product_search').slideToggle(300);
   })
