@@ -33,3 +33,5 @@
 # Ignore application configuration
 /public/upload/*
 /public/javascripts/*
+.rspec
+/coverage
