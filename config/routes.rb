@@ -22,6 +22,13 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api do
+    namespace :v1 do
+      get "get-new-product", to: "products#load_new_products"
+      post "login", to: "sessions#create"
+    end
+  end
+
   root "products#index"
   get "/about", to: "static_pages#about"
   get "/contact", to: "static_pages#contact"
@@ -39,6 +46,7 @@ Rails.application.routes.draw do
     get "/new", to: "products#new_products", on: :collection
     get :hot, on: :collection
     resources :comments, only: :create
+    get "new_product", to: "products#loadNewProductJson", on: :collection
   end
   resources :wishlists, only: %i(index destroy)
   resources :account_activations, only: :edit

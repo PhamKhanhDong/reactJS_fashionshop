@@ -186,3 +186,16 @@
     overflow: scroll;
   }
 }
+
+.header-bottom {
+  background: #0277b8;
+}
+
+#content {
+  .remember_me {
+    display: inline-block;
+    position: static;
+    margin: 0;
+    width: auto;
+  }
+}

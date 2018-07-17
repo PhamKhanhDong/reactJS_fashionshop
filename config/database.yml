@@ -10,11 +10,11 @@ default: &default
 
 development:
   <<: *default
-  database: "fashion_shop_develop"
+  database: "react_app_develop"
 
 test:
   <<: *default
-  database: "fashion_shop_test"
+  database: "react_app_test"
 
 production:
   <<: *default

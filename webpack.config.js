@@ -25,13 +25,13 @@ module.exports = {
     }]
   },
   plugins: [
-     new webpack.ProvidePlugin({
-        React: "react",
-        PropTypes: "prop-types",
-        update: "react-addons-update",
-        mui: "material-ui",
-        t: "counterpart",
-        config: __dirname + "/config/react_app",
-     })
-  ],
+    new webpack.ProvidePlugin({
+      React: "react",
+      PropTypes: "prop-types",
+      update: "react-addons-update",
+      mui: "material-ui",
+      t: "counterpart",
+      config: __dirname + "/config/react-app"
+    })
+  ]
 }
