@@ -11,10 +11,9 @@
   </head>
 
   <body>
-    <%= render "layouts/header" %>
-    <%= render "layouts/nav_bottom_menu" %>
+    <div id="header"></div>
     <%= render "layouts/flash" %>
-    <%= yield %>
-    <%= render "layouts/footer" %>
+    <div id="react-wrapper"></div>
+    <div id="footer" className="color-div"></div>
   </body>
 </html>

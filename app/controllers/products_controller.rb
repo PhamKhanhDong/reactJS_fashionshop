@@ -21,6 +21,11 @@ class ProductsController < ApplicationController
 
   def hot; end
 
+  def loadNewProductJson
+    newProduct = load_new_products
+    render json: {data: newProduct}
+  end
+
   private
 
   def load_new_products
